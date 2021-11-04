@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="text-center">
+    Cookies
+  </h1>
+
+  <add-cookie (createEvent)="addCookie($event)"></add-cookie>
+
+
+  <cookie-selector *ngIf="cookieList.length > 0" [cookieList]="cookieList" [cookieSelected]="cookieSelected">
+  </cookie-selector>
+
+  <cookie-list [cookieList]="cookieList"></cookie-list>
+
+</div>

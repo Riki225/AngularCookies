@@ -1,0 +1,26 @@
+<div class="container mb-2">
+  <h3>
+    edit a cookie
+  </h3>
+  <div class="form-group mb-1">
+    <label class="font-weight-light mb-0" for="update">Cookie to update: </label>
+    <select class="form-control form-control-sm" id="update" [(ngModel)]="cookieSelected">
+      <option *ngFor="let cookie of cookieList" [ngValue]="cookie">{{cookie.name}}</option>
+    </select>
+  </div>
+  <div class="form-group mb-1">
+    <label class="font-weight-light mb-0" for="updColour">Cookie colour: </label>
+    <select class="form-control form-control-sm" id="updColour" [(ngModel)]="cookieSelected.colour">
+      <option *ngFor="let item of Colours | keyvalue">{{item.value}}</option>
+    </select>
+  </div>
+  <div class="form-group mb-1">
+    <p class="font-weight-light mb-0">Chocolate Chips: </p>
+    <button (click)="addChocChip()">add</button>
+    <button (click)="removeChocChip()">remove</button>
+  </div>
+  <div class="form-group mb-1">
+    <p class="font-weight-light mb-0">Delete Cookie: </p>
+    <button (click)="removeCookie()">remove</button>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container mb-2">
+  <h3>
+    cookie list
+  </h3>
+  <h5 *ngIf="cookieList[0]===undefined">no cookies here!</h5>
+
+  <div id="cookieList" *ngIf="cookieList[0]!==undefined">
+    <div *ngFor="let cookie of cookieList" class="cookie" [style.background-color]="cookie.colour">
+      <div *ngIf="cookie.sprinkleColour!==undefined" class="sprinkle">{{cookie.chocolateChipNum}}</div>
+      <div *ngIf="cookie.sprinkleColour===undefined">{{cookie.chocolateChipNum}}</div>
+    </div>
+  </div>
+</div>

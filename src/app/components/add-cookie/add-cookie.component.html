@@ -1,0 +1,17 @@
+<div class="container mb-2">
+  <h3>
+    add a new cookie
+  </h3>
+  <div class="form-group mb-1">
+    <label class="font-weight-light mb-0" for="type">Cookie Type: </label>
+    <select class="form-control form-control-sm" id="type" [(ngModel)]="newCookieType">
+      <option value="Cookie">Cookie</option>
+      <option value="SprinkleCookie">Sprinkle Cookie</option>
+    </select>
+  </div>
+  <div class="form-group mb-1">
+    <label class="font-weight-light mb-0" for="name">Cookie Name: </label>
+    <input type="text" class="form-control form-control-sm" id="name" [(ngModel)]="newCookieName" />
+  </div>
+  <button (click)="newCookie()">create cookie</button>
+</div>
